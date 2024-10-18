@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int n;
+    int n, even = 0, odd = 0;
     printf("Enter number of elements: ");
     scanf("%d", &n);
-    int arr[n], min;
+    int arr[n];
     printf("Enter element: ");
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
-    }
-    min = arr[0];
-    for (int i = 1; i < n; i++) {
-        if (arr[i] < min) {
-            min = arr[i];
+        if (arr[i] % 2 == 0) {
+            even++;
+        } else {
+            odd++;
         }
     }
-    printf("Minimum element: %d\n", min);
+    printf("Even elements: %d\n", even);
+    printf("Odd elements: %d\n", odd);
     return 0;
 }
